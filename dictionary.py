@@ -4,3 +4,5 @@ item = {
     "department": "Televisions",
     "description": "55-inch Ultra HD Smart TV with HDR and built-in streaming apps."
 }
+dict_australia = {"name" : "continent, country","price": }
+    
