@@ -1,5 +1,5 @@
 print("Welcome to the shop")
-best_buy_items = [
+items = [
     
         {
                 "name": "Samsung 55"" 4K UHD TV",
@@ -25,26 +25,37 @@ best_buy_items = [
         "department": "Good food",
         "description": "Make the vegans mad"},
 
+        {
+         "name": "Mr. Whalen",
+         "price": 0,
+         "department": "teacher",
+         "description": "will code for $$"},
+
 ]
 
-for index, item in enumerate(best_buy_items):
+for index, item in enumerate(items):
             print(index, ":" ,(item)["name"])
-            best_buy_items[0]["name"]
-choice = input("Buy whatever you like!")
+            items[0]["name"]
+choice = int(input("Buy whatever you like!"))
 cart = []
 cost=0
+cart.append(items[choice])
+print(f"Added {items[choice]["name"]} into cart")
+cost += items[choice]["price"]
 
-while cart != "done":
-        cart.append(choice)
-        print(f"Added", choice, "price", "to cart")
-        cost +=(item["price"])
-        if choice == "name":
-                print({item}, "price")
+while True:
         check=input("Do you wish to keep shopping?")
-        if check == "No":
-                print("You've bought", {cart})
         if check == "Yes":
-                print("Okay! Keep shopping.")
+                choice = int(input("What else would you liek to buy?"))
+        cart.append(items[choice])
+        print(f"Added {items[choice]["name"]} into cart")
+        cost += items[choice]["price"]
+        if check == "No":
+                break
+
+for item in cart:
+        print(f'{item["name"]}" ${int(item["price"])}')
+print(f"Total: ${cost}")
         
 
 
