@@ -25,22 +25,16 @@ items = [
         "department": "Good food",
         "description": "Make the vegans mad"},
 
-        {
-         "name": "Mr. Whalen",
-         "price": 0,
-         "department": "teacher",
-         "description": "will code for $$"},
-
-]
+        ]
 
 for index, item in enumerate(items):
             print(index, ":" ,(item)["name"])
-            items[0]["name"]
-choice = int(input("Buy whatever you like!"))
+            items[0]['name']
+choice = int(input('Buy whatever you like!'))
 cart = []
 cost=0
 cart.append(items[choice])
-print(f"Added {items[choice]["name"]} into cart")
+print(f"Added {items[choice]['name']} into cart")
 cost += items[choice]["price"]
 
 while True:
@@ -48,13 +42,13 @@ while True:
         if check == "Yes":
                 choice = int(input("What else would you liek to buy?"))
         cart.append(items[choice])
-        print(f"Added {items[choice]["name"]} into cart")
+        print(f"Added {items[choice]['name']} into cart")
         cost += items[choice]["price"]
         if check == "No":
                 break
 
 for item in cart:
-        print(f'{item["name"]}" ${int(item["price"])}')
+        print(f'{item['name']}" ${int(item["price"])}')
 print(f"Total: ${cost}")
         
 
