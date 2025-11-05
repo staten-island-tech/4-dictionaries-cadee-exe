@@ -9,19 +9,19 @@ items = [
 
         {
                 "name": "French water",
-        "price": 555.99,
+        "price" : 555.99,
         "department": "Water",
         "description": "Water for the rich."},
 
         {
                 "name": "China",
-        "price": 77777777777.99,
+        "price" : 77777777777.99,
         "department": "",
         "description": "Densely populated country"},
 
         {
             "name": "Baconetta",
-        "price": 6.45,
+        "price" : 6.45,
         "department": "Good food",
         "description": "Make the vegans mad"},
 
